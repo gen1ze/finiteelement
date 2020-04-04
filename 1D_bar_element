@@ -4,9 +4,9 @@ l=list(map(float,input('give k1 k2 etc upto kn seperated by spaces').split()))
 k=np.array([[1,-1],[-1,1]])
 K=np.zeros((n+1,n+1))
 for i in range(n):
-    k=k*l[i]
+    k1=k*l[i]
     K_temp=np.zeros((n+1,n+1))
-    K_temp[i:i+2,i:i+2]=k
+    K_temp[i:i+2,i:i+2]=k1
     K+=K_temp
 print('global stiffness matrix is\n',K)
 print(K.shape)
